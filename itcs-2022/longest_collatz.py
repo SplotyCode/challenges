@@ -20,3 +20,16 @@ for _ in range(int(input())):
             max = value
             index = n
     print(str(index) + " " + str(max))
+
+# normal collatz sequence
+def collatzSeq(n):
+    chainNumber = 1
+    current = n
+    while current != 1:
+        if current % 2 == 0:
+            current = current/2
+            chainNumber += 1
+        else:
+            current = (3*current) + 1
+            chainNumber += 1
+    return [chainNumber, n]
